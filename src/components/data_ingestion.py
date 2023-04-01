@@ -5,7 +5,8 @@ from src.loggers import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 @dataclass
 class DataIngestionConfig:
     train_data_path = os.path.join('artifact','train.csv')
@@ -18,7 +19,7 @@ class DataIngestion:
     def iniatiate_data_ingestion(self):
         logging.info("Data Ingestion Started!!")
         try:
-            df = pd.read_csv('D:/vishal gotmare/Session/stud.csv')
+            df = pd.read_csv("D:/vishal gotmare/stud.csv")
             logging.info("read the dataset as dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok = True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
@@ -37,4 +38,7 @@ class DataIngestion:
         
 if __name__=="__main__":
     obj = DataIngestion()
-    obj.iniatiate_data_ingestion()
+    train_data, test_data, = obj.iniatiate_data_ingestion()
+    print(train_data,test_data)
+    data_transform = DataTransformation()
+    data_transform.initiate_data_transformation(train_data,test_data)
