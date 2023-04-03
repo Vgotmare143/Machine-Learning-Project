@@ -1,6 +1,8 @@
 import logging
 import os
 from datetime import datetime
+import sys
+sys.path.append('D:/vishal gotmare/ML_Project1/src/')
 
 log_file = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 logs_path = os.path.join(os.getcwd(),"logs",log_file)

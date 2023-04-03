@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append('D:/vishal gotmare/ML_Project1/')
 from src.exceptions import CustomException
 from src.loggers import logging
 import pandas as pd

@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 import numpy as np
 import dill
-from src.exception import CustomException
+from src.exceptions import CustomException
 
 def save_object(file_path,obj):
     try:
