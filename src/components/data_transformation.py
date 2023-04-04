@@ -1,4 +1,5 @@
 import sys
+sys.path.append('D:/vishal gotmare/ML_Project1/src/')
 import os
 import pandas as pd
 import numpy as np
@@ -6,9 +7,9 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from src.exceptions import CustomException
-from src.loggers import logging
-from src.utils import save_object
+from exceptions import CustomException
+from loggers import logging
+from utils import save_object
 from dataclasses import dataclass
 
 @dataclass

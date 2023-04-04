@@ -1,4 +1,5 @@
 import sys
+sys.path.append('D:/vishal gotmare/ML_Project1/src/')
 from loggers import logging
 
 def error_message_detail(error, error_detail:sys):

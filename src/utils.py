@@ -1,9 +1,10 @@
 import os
 import sys
+sys.path.append('D:/vishal gotmare/ML_Project1/src/')
 import pandas as pd
 import numpy as np
 import dill
-from src.exceptions import CustomException
+from exceptions import CustomException
 
 def save_object(file_path,obj):
     try:
